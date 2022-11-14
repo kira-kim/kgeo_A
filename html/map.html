@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="">
+<meta name="description" content="">
+
+<!-- 오픈그래프 이미지의 경우 최소한 600 x 315 px은 되어야 하며, 1200 x 630 px을 권장함 -->
+<meta property="og:image" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<!-- 다음의 태그는 필수는 아니지만, 포함하는 것을 추천함 -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+<link rel="stylesheet" href="../lib/jquery-ui.css">
+<link rel="stylesheet" href="../css/common.css">
+<!-- <link rel="stylesheet" href="../css/hover.css"> -->
+<script src="../lib/jquery-1.12.4.js"></script>
+<script src="../lib/jquery-ui.js"></script>
+<script src="../lib/swiper/js/swiper.js"></script>
+<script src="../js/ui.js"></script>
+
+<title>정비사업 후보지 분석</title>
+
+
+</head>
+<body>
+    
+    <div id="wrap">
+
+        <!-- header -->
+        <header id="header">
+            <!--accNav-->
+<!-- <div id="accNav">
+    <a href="#container">본문 바로가기</a>
+</div> -->
+<!--//accNav-->
+<article class="header">
+	<!-- logo -->
+	<div class="logo">
+		<a href="">
+			<img src="../images/header/logo_w.png" alt="k-geo 로고">
+		</a>
+		<i>|</i>
+		<p>정비사업 후보지 분석</p>
+	</div>
+	<!-- //logo -->
+	<!-- infor -->
+	<div class="infor">
+		<div class="log">
+			<a href="#none" class="name">
+				<img src="../images/header/header_ico_01.png" alt="사람모형아이콘" class="icon">
+				<p>국가공간정보센터&nbsp;<span>테스트</span>님</p>
+			</a>
+			<i>|</i>
+			<a href="#none" class="logout">
+				<img src="../images/header/header_ico_02.png" alt="로그아웃아이콘" class="icon">
+				<p>로그아웃</p>
+			</a>
+		</div>
+		<!-- //log -->
+		<a href="#none" class="bell">
+			<img src="../images/header/header_ico_03.png" alt="종 아이콘" class="bell_icon">
+			<p>10</p>
+		</a>
+	</div>
+	<!-- //infor -->
+
+</article>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <main id="container">
+            <div class="toc">
+                <article class="deps01">
+                    <a href="#none" class="btn active">
+                        <div><img src="../images/toc/toc_ico_01.png" alt="판별기준 관리 아이콘" class="btn_ico"></div>
+                        <p>판별기준 관리</p>
+                    </a>
+                    <a href="#none" class="btn">
+                        <div><img src="../images/toc/toc_ico_02.png" alt="정비사업 아이콘" class="btn_ico"></div>
+                        <p>정비사업</p>
+                    </a>
+                    <a href="#none" class="btn">
+                        <div><img src="../images/toc/toc_ico_03.png" alt="관심지역 아이콘" class="btn_ico"></div>
+                        <p>관심지역</p>
+                    </a>
+                    <a href="#none" class="btn">
+                        <div><img src="../images/toc/toc_ico_04.png" alt="과소필지 아이콘" class="btn_ico"></div>
+                        <p>과소필지</p>
+                    </a>
+                    <a href="#none" class="btn complete">
+                        <div><img src="../images/toc/toc_ico_05.png" alt="노후건물 아이콘" class="btn_ico"></div>
+                        <p>노후건물</p>
+                    </a>
+                    <a href="#none" class="btn">
+                        <div><img src="../images/toc/toc_ico_06.png" alt="인구통계 아이콘" class="btn_ico"></div>
+                        <p>인구통계</p>
+                    </a>
+                    <a href="#none" class="btn">
+                        <div><img src="../images/toc/toc_ico_07.png" alt="호수,도로 현황 아이콘" class="btn_ico"></div>
+                        <p>호수,도로 현황</p>
+                    </a>
+                    <a href="#none" class="btn">
+                        <div><img src="../images/toc/toc_ico_08.png" alt="토지건물 아이콘" class="btn_ico"></div>
+                        <p>토지건물</p>
+                    </a>
+                    <a href="#none" class="btn">
+                        <div><img src="../images/toc/toc_ico_09.png" alt="후보지 분석 실행 아이콘" class="btn_ico"></div>
+                        <p>후보지 분석 실행</p>
+                    </a>
+                    <a href="#none" class="btn">
+                        <div><img src="../images/toc/toc_ico_10.png" alt="후보지 분석 관리 아이콘" class="btn_ico"></div>
+                        <p>후보지 분석 관리</p>
+                    </a>
+                </article>
+                <!-- deps01 [E] -->
+                <article class="deps02 active">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 판별기준 관리 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 정비사업 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 관심지역 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 과소필지 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 노후건물 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 인구통계 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 호수,도로 현황 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 토지건물 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 후보지 분석 실행 [E] -->
+                <article class="deps02">
+                    <div class="inner">
+                        <div class="deps_tit">
+                            <h2>과소필지 현황 분석 결과 관리</h2>
+                        </div>
+                        <div class="cont_box">
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 1</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <ul>
+                                            <li>
+                                                <p>시,도</p>
+                                                <select name="cont_sel_01" id="cont_sel_01">
+                                                    <option value="">서울특별시</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <p>정비사업</p>
+                                                <select name="cont_sel_02" id="cont_sel_02">
+                                                    <option value="">22년 관악 주거환경개선</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnBlue" title="조회">조회</button>
+                                    </div>
+                                </div>
+                                <div class="group_cont">
+                                    <div class="cont_table_box">
+                                        <table>
+                                            <caption>관심지역 조회의 선택표로 선택박스 관심지역명 위치 기준일 과소필지율 기준 및 분석결과를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:36px;">
+                                                <col style="width: 72px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 90px;">
+                                                <col style="width: 54px;">
+                                                <col style="width: 54px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">선택</th>
+                                                    <th scope="col">관심지역명</th>
+                                                    <th scope="col">위치</th>
+                                                    <th scope="col">기준일</th>
+                                                    <th scope="col">과소<br>필지율</th>
+                                                    <th scope="col">기준 및<br>분석결과</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_01" id="table_chk_01">
+                                                        <label for="table_chk_01"></label>
+                                                    </td>
+                                                    <td>관심지역1</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>33.74</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_02" id="table_chk_02">
+                                                        <label for="table_chk_02"></label>
+                                                    </td>
+                                                    <td>관심지역2</td>
+                                                    <td>봉천동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="table_chk_03" id="table_chk_03">
+                                                        <label for="table_chk_03"></label>
+                                                    </td>
+                                                    <td>관심지역3</td>
+                                                    <td>신림동</td>
+                                                    <td>2022.01.01</td>
+                                                    <td>-</td>
+                                                    <td><button type="button" class="result_plus_btn"><img src="../images/toc/plus_ico.png" alt="기준 및 분석결과 추가 버튼"></button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cont_btn">
+                                        <button type="button" class="btnGray" title="삭제">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- group_box -->
+                            <div class="group_box">
+                                <div class="group_tit">
+                                    <p>STEP 2</p>
+                                    <h3>관심지역 조회</h3>
+                                </div>
+                                <div class="group_cont">
+                                    <button type="button" class="go_blue_btn" title="분석 실행">분석 실행</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cont box -->
+                    </div>
+                    <button type="button" class="toc_toggle_btn" title="toc 접기 버튼"></button>
+                </article>
+                <!-- deps02 후보지 분석 관리 [E] -->
+
+            </div>
+            <div class="map_container">
+                <div class="map_area">
+                    <div id="map"></div>
+                    <div class="top_menu">
+                        <div class="location">
+                            <ul>
+                                <li>
+                                    <span>경기도</span>
+                                    <div class="dep2">
+                                        <ul>
+                                            <li><span>OO도</span></li>
+                                            <li><span>OO도</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>광명시</span>
+                                    <div class="dep2">
+                                        <ul>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                            <li><span>OO시</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>철산12동</span>
+                                    <div class="dep2">
+                                        <ul>
+                                            <li><span>OO동</span></li>
+                                            <li><span>OO동</span></li>
+                                            <li><span>OO동</span></li>
+                                            <li><span>OO동</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 지도 위치 -->
+                        <div class="search_area">
+                            <select name="ex01" id="ex01" >
+                                <option value="">통합</option>
+                            </select>
+                            <div class="search_box">
+                                <input type="text" placeholder="검색어를 입력하세요." title="검색어 입력 창">
+                                <button type="button" class="search_btn" title="검색 버튼"></button>
+                                <div class="search_ex">
+                                    <p>ex) 서울 호텔, 제주 식물원</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 검색 영역 -->
+                        <div class="addressBox">
+                            <div class="head">
+                                <p>검색결과 <em>15</em>건</p>
+                                <button type="button"><img src="../images/toc/box_clo_ico.png" alt="검색팝업 닫기"></button>
+                            </div>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <span class="blue">도로명</span>
+                                            <p>서울특별시 강남구 테헤란로 123</p>
+                                        </div>
+                                        <div>
+                                            <span class="gray">지번</span>
+                                            <p>서울특별시 강남구 역삼동 123</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span class="blue">도로명</span>
+                                            <p>서울특별시 강남구 테헤란로 428(대치동, 테헤란로 대우 아이빌)</p>
+                                        </div>
+                                        <div>
+                                            <span class="gray">지번</span>
+                                            <p>서울특별시 강남구 역삼동 123(대치동, 테헤란로 대우 아이빌)</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span class="blue">도로명</span>
+                                            <p>서울특별시 강남구 테헤란로 123</p>
+                                        </div>
+                                        <div>
+                                            <span class="gray">지번</span>
+                                            <p>서울특별시 강남구 역삼동 123</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span class="blue">도로명</span>
+                                            <p>서울특별시 강남구 테헤란로 123</p>
+                                        </div>
+                                        <div>
+                                            <span class="gray">지번</span>
+                                            <p>서울특별시 강남구 역삼동 123</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span class="blue">도로명</span>
+                                            <p>서울특별시 강남구 테헤란로 123</p>
+                                        </div>
+                                        <div>
+                                            <span class="gray">지번</span>
+                                            <p>서울특별시 강남구 역삼동 123</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pagination">
+                                <button type="button">
+                                    <img src="../images/toc/toc_paging_l.png" alt="">
+                                </button>
+                                <div class="paging">
+                                    <p><em>1</em>&nbsp;/&nbsp;302</p>
+                                </div>
+                                <button type="button">
+                                    <img src="../images/toc/toc_paging_r.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- top_menu [E] -->
+                    <div class="tool_bar">
+                        <div class="map_more">
+                            <div class="deps01 deps02_in">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_01.png" alt="지도 아이콘">
+                                    </div>
+                                    <p>지도</p>
+                                </a>
+                                <div class="deps02">
+                                    <div>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_01.png" alt="바로e맵 아이콘">
+                                            <p>바로e맵</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_02.png" alt="항공사진 아이콘">
+                                            <p>항공사진</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_03.png" alt="백지도 아이콘">
+                                            <p>백지도</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="deps01">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_02.png" alt="일필지 아이콘">
+                                    </div>
+                                    <p>일필지</p>
+                                </a>
+                            </div>
+                            <div class="deps01">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_03.png" alt="속성보기 아이콘">
+                                    </div>
+                                    <p>속성보기</p>
+                                </a>
+                            </div> -->
+                        </div>
+                        <div class="layer">
+                            <div class="deps01 deps02_in">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_10.png" alt="기본레이어 아이콘">
+                                    </div>
+                                    <p>레이어</p>
+                                </a>
+                                <div class="deps02 deps02Popup">
+                                    <article class="popup" style="width: 400px;">
+                                        <div class="popup_tit">
+                                            <p>기본레이어</p>
+                                            <div class="titBtn">
+                                                <button class="opaBtn" type="button">
+                                                    <img src="../images/common/popup_clo_btn.png" alt="닫기버튼">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="popup_cont">
+                                            <div class="deLayer">
+                                                <div class="deLayerTit">
+                                                    <p>기본지도</p>
+                                                    <div class="inputArea">
+                                                        <label for="chk01">전체 선택/전체 해제</label>
+                                                        <input type="checkbox" id="chk01">
+                                                        <label for="chk01"></label>
+                                                    </div>
+                                                </div>
+                                                <ul class="dep01">
+                                                    <li>
+                                                        <div class="flex">
+                                                            <p class="txt"><span class="M">M</span>행정구역 시도_경계</p>
+                                                            <div class="inputArea">
+                                                                <input type="checkbox" id="chk02">
+                                                                <label for="chk02"></label>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="dep02">
+                                                            <li>
+                                                                <div class="flex">
+                                                                    <div class="flex">
+                                                                        <div class="colorBox" style="background-color: #F6F03E;"></div>
+                                                                        <p>행정구역시도_경계</p>
+                                                                    </div>
+                                                                    <div class="inputArea">
+                                                                        <input type="checkbox" id="chk03">
+                                                                        <label for="chk03"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="flex">
+                                                                    <div class="flex">
+                                                                        <div class="colorBox" style="background-color: #F6F03E;"></div>
+                                                                        <p>행정구역시도_경계</p>
+                                                                    </div>
+                                                                    <div class="inputArea">
+                                                                        <input type="checkbox" id="chk04">
+                                                                        <label for="chk04"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="dep01">
+                                                    <li>
+                                                        <div class="flex">
+                                                            <p class="txt"><span class="M">M</span>행정구역 시도_경계</p>
+                                                            <div class="inputArea">
+                                                                <input type="checkbox" id="chk05">
+                                                                <label for="chk05"></label>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="dep02">
+                                                            <li>
+                                                                <div class="flex">
+                                                                    <div class="flex">
+                                                                        <div class="colorBox" style="background-color: #F6F03E;"></div>
+                                                                        <p>행정구역시도_경계</p>
+                                                                    </div>
+                                                                    <div class="inputArea">
+                                                                        <input type="checkbox" id="chk06">
+                                                                        <label for="chk06"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="flex">
+                                                                    <div class="flex">
+                                                                        <div class="colorBox" style="background-color: #F6F03E;"></div>
+                                                                        <p>행정구역시도_경계</p>
+                                                                    </div>
+                                                                    <div class="inputArea">
+                                                                        <input type="checkbox" id="chk07">
+                                                                        <label for="chk07"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scale">
+                            <div class="deps01">
+                                <button type="button" class="scale_p" title="크게보기 버튼"></button>
+                            </div>
+                            <div class="deps01 scale_range">
+                                <input type="range" value="0">
+                            </div>
+                            <div class="deps01">
+                                <button type="button" class="scale_m" title="작게보기 버튼"></button>
+                            </div>
+                        </div>
+                        <div class="btn_tool">
+                            <div class="deps01">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_04.png" alt="초기화 아이콘">
+                                    </div>
+                                    <p>초기화</p>
+                                </a>
+                            </div>
+                            <div class="deps01 deps02_in">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_05.png" alt="그리기 아이콘">
+                                    </div>
+                                    <p>그리기</p>
+                                </a>
+                                <div class="deps02">
+                                    <div>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_04.png" alt="텍스트 아이콘">
+                                            <p>텍스트</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_05.png" alt="다각형 아이콘">
+                                            <p>다각형</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_06.png" alt="라인 아이콘">
+                                            <p>라인</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_07.png" alt="포인트 아이콘">
+                                            <p>포인트</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_08.png" alt="원 아이콘">
+                                            <p>원</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_09.png" alt="사각형 아이콘">
+                                            <p>사각형</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_10.png" alt="곡선 아이콘">
+                                            <p>곡선</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_11.png" alt="버퍼 아이콘">
+                                            <p>버퍼</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deps01 deps02_in">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_06.png" alt="측정 아이콘">
+                                    </div>
+                                    <p>측정</p>
+                                </a>
+                                <div class="deps02">
+                                    <div>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_12.png" alt="면적 아이콘">
+                                            <p>면적</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_13.png" alt="거리 아이콘">
+                                            <p>거리</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deps01 deps02_in">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_07.png" alt="출력 아이콘">
+                                    </div>
+                                    <p>출력</p>
+                                </a>
+                                <div class="deps02">
+                                    <div>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_14.png" alt="화면저장 아이콘">
+                                            <p>화면저장</p>
+                                        </a>
+                                        <a href="#none">
+                                            <img src="../images/toc/map_deps2_ico_15.png" alt="출력 아이콘">
+                                            <p>출력</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deps01 deps02_in">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_08.png" alt="인덱슴 아이콘">
+                                    </div>
+                                    <p>인덱스맵</p>
+                                </a>
+                                <div class="deps02">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="deps01 deps02_in">
+                                <a href="#none">
+                                    <div>
+                                        <img src="../images/toc/map_deps1_ico_09.png" alt="도움말 아이콘">
+                                    </div>
+                                    <p>도움말</p>
+                                </a>
+                                <div class="deps02">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tool_bar [E] -->
+                </div>
+                <!-- map_area [E] -->
+                <article class="popup" style="top: 198px; left: 725px; width: 640px;">
+                    <div class="popup_tit">
+                        <p>과소필지 현황 분석 결과 관리</p>
+                        <a href="#none" class="popup_clo_btn" title="팝업 닫기 버튼"><img src="../images/common/popup_clo_btn.png" alt="팝업 닫기 버튼"></a>
+                    </div>
+                    <div class="popup_cont">
+                        <div class="popup_cont_tit"><p>과소필지 현황 분석 결과 관리</p></div>
+                        <table>
+                            <caption>과소필지 현황 분석 결과 관리표로 구역명 필지구분 기준 필지수 과소필지수 비율의 정보를 제공합니다.</caption>
+                            <thead>
+                                <tr>
+                                    <th>구역명</th>
+                                    <th>필지구분</th>
+                                    <th>기준(㎡)</th>
+                                    <th>필지수</th>
+                                    <th>과소필지수</th>
+                                    <th>비율</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="5">구역명1</td>
+                                    <td>주거지역</td>
+                                    <td>90</td>
+                                    <td>300</td>
+                                    <td>100</td>
+                                    <td>33.33</td>
+                                </tr>
+                                <tr>
+                                    <td>상업지역</td>
+                                    <td>150</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                    <td>50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>공업지역</td>
+                                    <td>200</td>
+                                    <td>5</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>녹지지역</td>
+                                    <td>200</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>기타지역</td>
+                                    <td>90</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>전체</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>326</td>
+                                    <td>110</td>
+                                    <td>33.74</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer id="footer">
+            
+        </footer>
+        <!-- //footer -->
+    </div>
+    
+</body>
+</html>
